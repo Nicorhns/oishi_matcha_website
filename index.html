@@ -1,145 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oishi Matcha - Premium Matcha Bar</title>
-    <link rel="stylesheet" href="./resources/styles/styles.css"/>
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oishi Matcha — Matcha bar</title>
+  <meta name="description" content="Oishi Matcha is a matcha bar serving ceremonial-grade matcha from Uji, Japan, prepared to order.">
+  <meta name="theme-color" content="#F4F2EC">
+  <link rel="canonical" href="https://oishimatcha.be/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oishi Matcha">
+  <meta property="og:description" content="Ceremonial-grade matcha from Uji, Japan — prepared to order, one bowl at a time.">
+  <meta property="og:url" content="https://oishimatcha.be/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Oishi Matcha</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#menu" class="nav-link">Menu</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <div class="paper">
+    <!-- Washi texture: grain plus horizontal and vertical fibres, generated in the browser -->
+    <svg class="texture" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="washi-grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.40  0 0 0 0 0.39  0 0 0 0 0.36  0 0 0 0.9 -0.35"/>
+        </filter>
+        <filter id="washi-fibers-h" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.22" numOctaves="3" seed="11"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.52  0 0 0 0 0.51  0 0 0 0 0.48  3.2 0 0 0 -1.95"/>
+        </filter>
+        <filter id="washi-fibers-v" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.18 0.008" numOctaves="3" seed="29"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 0.99  0 0 0 0 0.95  3.4 0 0 0 -2.1"/>
+        </filter>
+      </defs>
+      <rect class="grain" width="100%" height="100%" filter="url(#washi-grain)"/>
+      <rect class="fibers" width="100%" height="100%" filter="url(#washi-fibers-h)"/>
+      <rect class="fibers" width="100%" height="100%" filter="url(#washi-fibers-v)"/>
+    </svg>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Oishi Matcha</h1>
-            <p class="hero-subtitle">Experience the Art of Premium Japanese Matcha</p>
-            <a href="#menu" class="cta-button">Explore Our Menu</a>
-        </div>
-        <div class="hero-overlay"></div>
-    </section>
+    <div class="wrap">
+      <header class="site-header">
+        <a class="brand" href="#top">
+          <span class="hanko" aria-hidden="true">抹</span>Oishi Matcha
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="#menu">Menu</a>
+          <a href="#visit">Visit</a>
+        </nav>
+      </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Welcome to Oishi Matcha, where tradition meets modernity in every cup. We are passionate about bringing you the finest ceremonial-grade matcha sourced directly from the historic tea fields of Uji, Japan.</p>
-                    <p>Our expert tea masters have carefully curated a selection of premium matcha beverages and treats, each crafted with precision and love. From traditional whisked matcha to innovative matcha lattes and desserts, we celebrate the versatility of this superfood.</p>
-                    <p>Step into our serene space and discover the calming ritual of matcha, a centuries-old tradition that promotes mindfulness, health, and wellbeing.</p>
-                </div>
-                <div class="about-features">
-                    <div class="feature">
-                        <div class="feature-icon">🍵</div>
-                        <h3>Premium Quality</h3>
-                        <p>Ceremonial-grade matcha from Uji, Japan</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🌱</div>
-                        <h3>Organic & Pure</h3>
-                        <p>100% organic, no additives or preservatives</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">✨</div>
-                        <h3>Crafted Fresh</h3>
-                        <p>Made to order with precision and care</p>
-                    </div>
-                </div>
+      <main>
+        <section id="top" class="hero">
+          <div class="hero-text">
+            <p class="eyebrow">Matcha bar</p>
+            <h1>Whisked slowly,<br>served simply.</h1>
+            <p class="lede">Ceremonial-grade matcha from Uji, Japan — prepared to order, one bowl at a time.</p>
+            <a class="cta" href="#menu">See the menu</a>
+          </div>
+          <div class="kanji" aria-hidden="true"><span>抹</span><span>茶</span></div>
+        </section>
+
+        <hr>
+
+        <section id="menu" class="menu">
+          <h2>Menu</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <h3>Traditional matcha</h3>
+              <p>Whisked in the bowl, nothing added.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2 class="section-title">Our Menu</h2>
-            <p class="menu-intro">Discover our carefully crafted selection of matcha beverages and treats</p>
-
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="menu-item-icon">🍵</div>
-                    <h3>Traditional Matcha</h3>
-                    <p>Ceremonial whisked matcha in its purest form</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-icon">☕</div>
-                    <h3>Matcha Latte</h3>
-                    <p>Creamy blend of matcha with your choice of milk</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-icon">🧊</div>
-                    <h3>Iced Matcha</h3>
-                    <p>Refreshing cold matcha beverages</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-icon">🍰</div>
-                    <h3>Matcha Desserts</h3>
-                    <p>Cakes, cookies, and sweet treats</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-icon">🥤</div>
-                    <h3>Specialty Drinks</h3>
-                    <p>Unique matcha creations and seasonal specials</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-icon">🍪</div>
-                    <h3>Pastries</h3>
-                    <p>Fresh baked goods infused with matcha</p>
-                </div>
+            <div class="menu-item">
+              <h3>Matcha latte</h3>
+              <p>With your choice of milk.</p>
             </div>
-
-            <div class="menu-pdf">
-                <a href="./menu.pdf" target="_blank" class="pdf-button">View Full Menu (PDF)</a>
+            <div class="menu-item">
+              <h3>Iced matcha</h3>
+              <p>Cold, bright, over ice.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Visit Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h3>📍 Location</h3>
-                        <p>123 Matcha Street<br>City, State 12345</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>🕐 Hours</h3>
-                        <p>Monday - Friday: 8:00 AM - 8:00 PM<br>
-                        Saturday - Sunday: 9:00 AM - 9:00 PM</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>📧 Contact</h3>
-                        <p>Email: hello@oishimatcha.com<br>
-                        Phone: (555) 123-4567</p>
-                    </div>
-                </div>
+            <div class="menu-item">
+              <h3>Seasonal specials</h3>
+              <p>Rotating creations — ask at the bar.</p>
             </div>
-        </div>
-    </section>
+            <div class="menu-item">
+              <h3>Desserts</h3>
+              <p>Cakes, cookies and sweets.</p>
+            </div>
+            <div class="menu-item">
+              <h3>Pastries</h3>
+              <p>Baked with matcha.</p>
+            </div>
+          </div>
+          <a class="cta" href="menu.pdf">Full menu (PDF)</a>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Oishi Matcha. All rights reserved.</p>
-            <p class="footer-tagline">Crafted with love and premium matcha</p>
-        </div>
-    </footer>
+        <hr>
 
-    <script src="./resources/scripts/script.js"></script>
+        <section id="visit" class="visit">
+          <h2>Visit</h2>
+          <div class="visit-grid">
+            <div>
+              <p class="label">Address</p>
+              <p>[STREET + NUMBER]<br>[POSTCODE CITY]</p>
+            </div>
+            <div>
+              <p class="label">Hours</p>
+              <p>[WEEKDAY HOURS]<br>[WEEKEND HOURS]</p>
+            </div>
+            <div>
+              <p class="label">Contact</p>
+              <p><a href="mailto:[EMAIL]">[EMAIL]</a><br><a href="https://instagram.com/[INSTAGRAM]">@[INSTAGRAM]</a></p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© <span id="year">2026</span> Oishi Matcha</span>
+        <span>oishimatcha.be</span>
+      </footer>
+    </div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
