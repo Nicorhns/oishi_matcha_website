@@ -12,9 +12,34 @@
   --seal-text: #F6EFE2;
   --fibers: 0.3;          /* 0–1: strength of the paper fibres */
   --grain: 0.18;          /* 0–1: strength of the fine grain */
+  --glow: rgba(255,255,252,0.5);      /* light patches in the paper */
+  --glow-soft: rgba(255,255,252,0.35);
+  --shade: rgba(110,108,100,0.035);   /* darker patch in the paper */
 
   --serif: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
   --sans: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif;
+
+  color-scheme: light dark;
+}
+
+/* Dark mode: sumi-dyed washi, follows the system setting */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1B1C18;
+    --ink: #E9E6DD;
+    --ink-soft: #BDBAB0;
+    --ink-muted: #A3A096;
+    --rule: #3A3B34;
+    --accent: #A9C46C;
+    --accent-dark: #C9DC98;
+    --seal: #B03C30;
+    --seal-text: #F6EFE2;
+    --fibers: 0.05;
+    --grain: 0.3;
+    --glow: rgba(255,255,240,0.03);
+    --glow-soft: rgba(255,255,240,0.02);
+    --shade: rgba(0,0,0,0.22);
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -43,9 +68,9 @@ a:hover { color: var(--accent-dark); }
   min-height: 100vh;
   background-color: var(--paper);
   background-image:
-    radial-gradient(ellipse 60% 40% at 15% 10%, rgba(255,255,252,0.5), transparent 70%),
-    radial-gradient(ellipse 50% 35% at 85% 55%, rgba(110,108,100,0.035), transparent 70%),
-    radial-gradient(ellipse 70% 30% at 40% 90%, rgba(255,255,252,0.35), transparent 70%);
+    radial-gradient(ellipse 60% 40% at 15% 10%, var(--glow), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 85% 55%, var(--shade), transparent 70%),
+    radial-gradient(ellipse 70% 30% at 40% 90%, var(--glow-soft), transparent 70%);
 }
 .texture {
   position: absolute;
